@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>川菜 - 熊猫外卖</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="flex-container">
+    <header class="header">
+        <nav class="main-nav">
+            <div class="logo-container">
+                <img src="照片\宠物.png" alt="宠物logo" class="logo">
+                <h1 class="site-title">熊猫外卖</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="搜索美食..." class="search-input">
+                <button class="search-button">搜索</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="chuancai.html" class="active">川菜</a></li>
+                <li><a href="yuecai.html">粤菜</a></li>
+                <li><a href="dessert.html">甜品</a></li>
+                <li><a href="drinks.html">饮料</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h2>川菜美食</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card" id="xiaochi">
+                <img src="照片\熊猫喝咖啡.png" alt="熊猫喝咖啡" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>小熊猫饭店</h3>
+                    <p>特色：熊猫主题咖啡和川菜小吃</p>
+                    <div class="restaurant-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="review-count" data-restaurant="xiaochi">(132条评价)</span>
+                    </div>
+                    <a href="川菜/小熊猫饭店.html" class="order-button">立即订餐</a>
+                </div>
+            </div>
+            <div class="restaurant-card" id="zhucai">
+                <img src="照片\熊猫脚印.png" alt="熊猫脚印" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>熊熊鸡肉店</h3>
+                    <p>特色：熊猫脚印形状的鸡肉</p>
+                    <div class="restaurant-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="review-count" data-restaurant="zhucai">(208条评价)</span>
+                    </div>
+                    <a href="川菜/熊熊鸡肉店.html" class="order-button">立即订餐</a>
+                </div>
+            </div>
+            <div class="restaurant-card" id="xiaoliao">
+                <img src="照片\熊猫骑自行车.png" alt="熊猫骑自行车" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>熊猫快餐店</h3>
+                    <p>特色：快速配送的川菜快餐</p>
+                    <div class="restaurant-rating">
+                        <span class="stars">★★★☆☆</span>
+                        <span class="review-count" data-restaurant="xiaoliao">(95条评价)</span>
+                    </div>
+                    <a href="川菜/熊猫快餐店.html" class="order-button">立即订餐</a>
+                </div>
+            </div>
+            <div class="restaurant-card" id="tang">
+                <img src="照片\熊猫上班.png" alt="熊猫上班" class="restaurant-image">
+                <div class="restaurant-info">
+                    <h3>熊猫火锅店</h3>
+                    <p>特色：适合上班族的快捷火锅</p>
+                    <div class="restaurant-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="review-count" data-restaurant="tang">(176条评价)</span>
+                    </div>
+                    <a href="川菜/熊猫火锅店.html" class="order-button">立即订餐</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://baike.baidu.com/item/%E7%BE%8E%E5%9B%A2%E5%A4%96%E5%8D%96/15824335" target="_blank">关于我们</a>
+                <a href="https://i.meituan.com/help/" target="_blank">帮助中心</a>
+                <a href="#">联系方式：13855555555</a>
+            </div>
+            <div class="social-media">
+                <!-- 添加社交媒体图标和链接 -->
+            </div>
+            <p class="copyright">&copy; 2024 美食外卖网站</p>
+        </div>
+    </footer>
+
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="reviewModalTitle"></h2>
+            <div id="reviewList"></div>
+            <form id="reviewForm">
+                <h3>添加评论</h3>
+                <textarea id="reviewContent" placeholder="请输入您的评论" required></textarea>
+                <button type="submit">提交评论</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>
